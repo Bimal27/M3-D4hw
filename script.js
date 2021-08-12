@@ -1,4 +1,4 @@
- let bookList = []
+ let bookList = [];
 
 
  function select(e) {
@@ -7,8 +7,10 @@
 
  function filterBooks(query) {
     console.log(query)
-    const filteredBooks = bookList.filter(book => book.title.toLowerCase().includes(query.toLowerCase()))
-    displayBooks(filteredBooks)
+   
+    const filteredBooks = bookList.filter((book) =>  book.title.toLowerCase().includes(query.toLowerCase()));
+   
+    displayBooks(filteredBooks);
 }
 
 const skipMe = (e) => {
@@ -17,6 +19,7 @@ const skipMe = (e) => {
 
 const displayBooks = (books) =>{
     let row = document.querySelector('.row')
+    row.innerHTML = ""
     books.forEach((book) =>{
         row.innerHTML +=`<div class="col-md-4">
                             <div class="card">
@@ -40,9 +43,9 @@ const fetchData = () =>{
     .then(resp => resp.json())
     .then(books =>{
         bookList = books
-       
+    //    console.log(bookList)
         displayBooks(books)
-        console.log(books)
+        // console.log(books)
     }).catch(err =>{
         console.log(err)
     })
