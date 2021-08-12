@@ -7,10 +7,11 @@
 
  function filterBooks(query) {
     console.log(query)
+    if(query.length > 3){
+    const filteredBooks = bookList.filter((book) =>  book.title.toLowerCase().includes(query.toLowerCase()))
    
-    const filteredBooks = bookList.filter((book) =>  book.title.toLowerCase().includes(query.toLowerCase()));
-   
-    displayBooks(filteredBooks);
+    displayBooks(filteredBooks)
+    }
 }
 
 const skipMe = (e) => {
