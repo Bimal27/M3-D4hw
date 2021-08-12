@@ -28,20 +28,32 @@
                 <!-- Bootstrap CSS -->
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
                 <script src="script.js"></script>
+                <style>
+                    .selected{
+                        border: 3px solid red;
+                    }
+                    .navbar{
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 10;
+                    }
+                </style>
 
-                <title>Online BookStore</title>
+                <title >Online BookStore</title>
         </head>
             <body style="background-color: #e3f2fd">
                 <nav class="navbar navbar-dark bg-dark">
                     <a class="navbar-brand">Navbar</a>
-                    <form class="form-inline">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="form-inline" >
+                        <input type="text" class="form-control" placeholder="Search..."  onchange="filterBooks(this.value)">
                       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                   </nav>
                      <div class="container-fluid">
 
-                        <h1>Book Store</h1>
+                        <h1 class="mt-5">Book Store</h1>
                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
@@ -56,7 +68,7 @@
                             </div>
                           </div>
                     </div>
-
+                  
                 <h2 class="my-3 ml-5" >Available Books</h2>
                 <div class="container">
                     
@@ -64,6 +76,19 @@
                         
                     </div>
                 </div>
+                <footer class="text-light bg-dark" style="height: 100px;">
+                    <div class="container text-center">
+                        <div> 
+                      <p class="float-right">
+                        <a href="#">Back to top</a>
+                      </p>
+                      <p>
+                        Book example is &copy; Bootstrap, but please download and customize
+                        it for yourself!
+                      </p>
+                    </div>
+                    </div>
+                  </footer>
 
                 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
