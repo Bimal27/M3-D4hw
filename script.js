@@ -22,7 +22,7 @@
         € ${book.price} 
         </li>
         <div>
-        <button class="btn btn-danger" id="delete-button" onclick= "deleteItem('${String(book.asin)}')">Delete</button>
+        <button class="btn btn-danger" id="delete-button" onclick= "deleteItem('${String(book.asin)}')"><i class="bi bi-trash"></i></button>
         </div>
         </ul>
         </div>`
